@@ -3,7 +3,13 @@
         {
             "title":"Simulating Wildlife Using AI Techniques",
  	        "description":"Written in C++, this project researches and explores what is needed to accurately simulate animal behaviour. It consider different decision making processes to switch between behaviours and how to replicate realistic animal reproduction to produce better offspring using genetic algorithms. It addresses problems such as O(n^2) boid checks and implements a possible solution. The application implements fuzzy logic and finite state machines to create boids that analyse their surroundings and apply the correct behaviours in a realistic way.",
-			"source" : "https://bitbucket.org/esutherland/simulating-wildlife-using-ai-techniques"
+			"source" : "https://bitbucket.org/esutherland/simulating-wildlife-using-ai-techniques",
+			"images" :
+				[
+					"SimulatingWildlife1.png",
+					"SimulatingWildlife2.png",
+					"SimulatingWildlife3.png"
+				]
 	    },
         {
             "title":"Tipping Tower",
