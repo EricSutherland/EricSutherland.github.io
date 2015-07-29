@@ -1,72 +1,70 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 <script> 
-$.getJSON( "test.json", function( data ) 
-{
-	data = data["projects"];
-
-	var items = [];
-	$.each( data, function( key, val ) 
-	{
-		console.log(val['title']);
-		var div = '<div class="panel panel-danger">	<div class="well">	<div class="row">	<div class="col-xs-6 col-md-6">	<h2>';
-		div += val['title'];
-		div += '</h2><p>';
-		div += val['description'];
-		div += '</p>	</div>';
+		$.getJSON( "test.json", function( data ) 
+		{
+			data = data["projects"];
 		
-		//div += '<div id="myCarousel" class="carousel slide" data-ride="carousel">	<ol class="carousel-indicators">';
-		//	
-		//for (int i = 0 ; i < data['data'].length ; i++ )
-		//{
-		//	div += '<li data-target="#myCarousel" data-slide-to="'+ i +'" class=""></li>';
-		//}
-		//div +='</ol>	<div class="carousel-inner" role="listbox">';
+			var items = [];
 			
-		int count = 0;
-		//$.each( data['data'], function( pos, val2 ) 
-		//{
-		//	if (count ==0)
-		//	{
-		//		div += '<div class="item active left">';
-		//	}
-		//	else if (count ==1)
-		//	{
-		//		div += '<div class="item next left">';
-		//	}
-		//	else
-		//	{
-		//		div += '<div class="item">';
-		//	}
-		//	
-		//	if (val2['youtube'] != "undefined")
-		//	{
-		//		div += '<iframe width="480" height="360" src=';
-		//		div += val['youtube'];
-		//		div += 'frameborder="0" allowfullscreen></iframe>';
-		//	}
-		//	else if (val2['image'] != "undefined")
-		//	{
-		//		div += '<img src=';
-		//		div += val['image'];
-		//		div += '>';
-		//	}
-		//	
-		//	div += '</div>	</div>';
-		//};
-		
-		//div += '<div class="col-xs-6 col-md-6">	<iframe width="480" height="360" src=';
-		//div += val['youtube'];
-		//div += ' frameborder="0" allowfullscreen></iframe>	</div>';
-		//
-		//div += '<div class="col-xs-6 col-md-3">	<a href="#" class="thumbnail">	<img src=';
-		//div += val['image'];
-		//div += '>	</a>	</div>';
-		
-		div += '</div>	</div>	</div>';
-		
-		$( div ).appendTo( "#project-section" );
-	});
-});
+			$.each( data, function( key, val ) 
+			{
+				
+				var div = '<div class="well">	<div class="row">	<div class="col-xs-6 col-md-6">';
+				div += '<h3> <a href='+ val['source'] +'>';
+				div += val['title'];
+				div += '</a></h3><p>';
+				div += val['description'];
+				div += '</p>	</div>'
+				
+				div += '<div class="col-xs-6 col-md-6">';
+				//---------------
+
+				if (val['images'] != undefined && val['images'].length != 0)
+				{
+					var tempTitle = val['title'].replace(/ /g, '-');
+					div += '<div id="carousel-'+ tempTitle +'" class="carousel slide" data-ride="carousel">';
+	
+					div += '	<ol class="carousel-indicators">';
+					div += '		<li data-target="#carousel-'+ tempTitle +'" data-slide-to="0" class="active"></li>';
+					
+					for (var i = 1 ; i < val['images'].length ; i++)
+					{
+						div += '	<li data-target="#carousel-'+ tempTitle +'" data-slide-to="'+i+'"></li>';
+					}
+					div += '	</ol>';
+					
+					div += '	<div class="carousel-inner">';
+					div += '		<div class="item active" align="center">';
+					div += '			<img class="image-main" src="'+ val['images'][0] +'" align="center"/>';
+					div += '		</div>';
+					
+					for (var i = 1 ; i < val['images'].length ; i++)
+					{
+						div += '	<div class="item" align="center">';
+						div += '		<img class="image-main" src="'+ val['images'][i] +'" align="center"/>';
+						div += '	</div>';
+					}
+
+					div += '	</div> ';
+					
+					div += '	<a href="#carousel-'+ tempTitle +'" class="left carousel-control" data-slide="prev">';
+					div += '		<span class="glyphicon glyphicon-chevron-left"></span>';
+					div += '	</a>';
+					div += '	<a href="#carousel-'+ tempTitle +'" class="right carousel-control" data-slide="next">';
+					div += '		<span class="glyphicon glyphicon-chevron-right"></span>';
+					div += '	</a>';
+					div += '</div>';
+				}
+
+				//---------------
+				div +=	'</div>';
+				
+				div +='</div></div>';
+				
+				$( div ).appendTo( "#project-section" );
+
+			});
+		});
 </script> 
 
 <div class="page-header">
