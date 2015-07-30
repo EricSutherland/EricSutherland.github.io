@@ -1,8 +1,8 @@
 body{
-  background: -webkit-linear-gradient(#339933, #1F5C1F); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#339933, #1F5C1F); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#339933, #1F5C1F); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#339933, #1F5C1F); /* Standard syntax */
+  background: -webkit-linear-gradient(#85C285,#339933); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#85C285,#339933); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#85C285,#339933); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#85C285,#339933); /* Standard syntax */
   background-attachment: fixed;
 } 
 
@@ -12,5 +12,19 @@ body{
 }
 
 .image-main {
- max-height:450px;
+ width: auto;
+  height: 450px;
+  max-height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.image-parent {
+ width: auto;
+  height: 450px;
+  max-height: 450px;
+  position: relative;
+
 }

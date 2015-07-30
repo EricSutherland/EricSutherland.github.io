@@ -10,11 +10,13 @@
 			{
 				
 				var div = '<div class="well">	<div class="row">	<div class="col-xs-6 col-md-6">';
-				div += '<h3> <a href='+ val['source'] +'>';
+				div += '<h3>';
 				div += val['title'];
-				div += '</a></h3><p>';
+				div += '</h3><p>';
 				div += val['description'];
-				div += '</p>	</div>'
+				div += '</p>';
+				div += '<a href='+ val['source'] +' class="btn btn-info" >Source Code</a>';
+				div += '</div>'
 				
 				div += '<div class="col-xs-6 col-md-6">';
 				//---------------
@@ -33,14 +35,14 @@
 					}
 					div += '	</ol>';
 					
-					div += '	<div class="carousel-inner">';
-					div += '		<div class="item active" align="center">';
+					div += '	<div class="carousel-inner" height="100%">';
+					div += '		<div class="item active image-parent" align="center">';
 					div += '			<img class="image-main" src="'+ val['images'][0] +'" align="center"/>';
 					div += '		</div>';
 					
 					for (var i = 1 ; i < val['images'].length ; i++)
 					{
-						div += '	<div class="item" align="center">';
+						div += '	<div class="item image-parent" align="center">';
 						div += '		<img class="image-main" src="'+ val['images'][i] +'" align="center"/>';
 						div += '	</div>';
 					}
