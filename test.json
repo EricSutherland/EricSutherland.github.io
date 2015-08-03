@@ -6,9 +6,9 @@
 			"source" : "https://bitbucket.org/esutherland/simulating-wildlife-using-ai-techniques",
 			"images" :
 				[
-					"SimulatingWildlife1.png",
-					"SimulatingWildlife2.png",
-					"SimulatingWildlife3.png"
+					"images/SimulatingWildlife1.png",
+					"images/SimulatingWildlife2.png",
+					"images/SimulatingWildlife3.png"
 				],
 			"buttons" :
 			{
@@ -18,29 +18,31 @@
         {
             "title":"Tipping Tower",
  	        "description":"Given 48 hours I had to create a fun and simple game that in incorporates gambling. Written in Javascript Tipping Tower is a simple game where the aim is to build your tower up to your target level to win money, with higher targets having higher odds.",
-	        "youtube" : "https://www.youtube.com/embed/OihB4ppGsmo?rel=0&amp;controls=0&amp;showinfo=0",
 			"source" : "https://github.com/EricSutherland/Tipping-Tower",
 			"images" : 
                 [
-                    "TippingTowerGame1.png",
-					"TippingTowerMenu.png",
-					"TippingTowerWin.png",
-					"TippingTowerCombo.png",
-					"TippingTowerLose.png"
+                    "images/TippingTowerGame1.png",
+					"images/TippingTowerMenu.png",
+					"images/TippingTowerWin.png",
+					"images/TippingTowerCombo.png",
+					"images/TippingTowerLose.png"
                 ]
         },
         {
             "title":"Photo Slider IOS",
-	        "youtube" : "https://www.youtube.com/embed/OihB4ppGsmo?rel=0&amp;controls=0&amp;showinfo=0",
  	        "description" : "A simple tile sliding app written in objective-C for IOS, that allow the users to use their own photos and compete against each other to complete a board in the fastest time with the fewest moves.",
 			"source" : "https://bitbucket.org/esutherland/photo-slider",
 			"images" : 
                 [
-					"PhotoSliderMenu.png",
-					"PhotoSliderLogin.png",
-					"PhotoSliderGame.png",
-					"PhotoSliderChangePicture.png",
-                    "PhotoSliderChangedPicture.png"
-                ]
+					"images/PhotoSliderMenu.png",
+					"images/PhotoSliderLogin.png",
+					"images/PhotoSliderGame.png",
+					"images/PhotoSliderChangePicture.png",
+                    "images/PhotoSliderChangedPicture.png"
+                ],
+				"buttons" :
+			{
+				"Video" : "https://www.youtube.com/watch?v=OihB4ppGsmo"
+			}
         }
 ]}
