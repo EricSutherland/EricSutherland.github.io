@@ -9,7 +9,11 @@
 					"SimulatingWildlife1.png",
 					"SimulatingWildlife2.png",
 					"SimulatingWildlife3.png"
-				]
+				],
+			"buttons" :
+			{
+				"UML" : "http://www.gliffy.com/go/publish/image/7703813/L.png"
+			}
 	    },
         {
             "title":"Tipping Tower",
@@ -24,7 +28,6 @@
 					"TippingTowerCombo.png",
 					"TippingTowerLose.png"
                 ]
-
         },
         {
             "title":"Photo Slider IOS",

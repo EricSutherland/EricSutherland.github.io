@@ -16,6 +16,15 @@
 				div += val['description'];
 				div += '</p>';
 				div += '<a href='+ val['source'] +' class="btn btn-info" >Source Code</a>';
+				
+				if (val['buttons'] != undefined && val['buttons'].length != 0)
+				{
+					for(var key in val['buttons'])
+					{
+						div += '<a href='+ val['buttons'][key] +' class="btn btn-info" >' + key + '</a>';
+					}
+				}
+				
 				div += '</div>'
 				
 				div += '<div class="col-xs-6 col-md-6">';
